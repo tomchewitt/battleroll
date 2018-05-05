@@ -1,0 +1,121 @@
+.single__title {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+}
+
+.single__date {
+    position: relative;
+    z-index: 2;
+
+    font-size: em-calc(18px);
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    color: $color-heading;
+}
+
+.single__header {
+    position: relative;
+
+    margin-top: 2.5em;
+}
+
+.single__header:before {
+    width: 150px;
+    height: 300px;
+    display: block;
+
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: 1;
+
+    background-image: url('../img/texture.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    content: '';
+}
+
+.single__content {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 2em;
+
+    a,
+    a:visited {
+        font-weight: 600;
+        color: $color-blue;
+    }
+
+    img {
+        display: block;
+        width: 120%;
+        height: auto;
+        margin: 1.8em 0 1.8em -10%;
+    }
+}
+
+.single__labels {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    padding-top: 1.5em;
+
+    font-size: em-calc(14px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $color-heading;
+
+    border-top: dotted 2px $color-border;
+
+    a,
+    a:visited {
+        position: relative;
+
+        display: inline-block;
+
+        font-weight: 600;
+        color: $color-blue;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 2px;
+
+            background: $color-blue;
+
+            content: '';
+
+            transition: all 0.3s ease;
+
+            transform: scaleX(0);
+        }
+
+        &:hover {
+            &:before {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    .single__content {
+        img {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
