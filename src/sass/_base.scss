@@ -1,4 +1,3 @@
-
 body {
     padding: 0;
     margin: 0;
@@ -9,8 +8,12 @@ body {
     font-size: $em-base;
     line-height: 1.8em;
     color: $color-body;
+}
 
-    background: $color-bg;
+a,
+a:visited {
+    font-weight: 600;
+    color: $color-blue;
 }
 
 .inner {

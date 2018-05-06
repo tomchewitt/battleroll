@@ -1,44 +1,36 @@
-.site-header__inner {
-    overflow: hidden;
+.site-header {
+    padding: 2.5em 0;
 
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-
-    text-align: center;
-
-    .site-header__secondary-nav & {
-        padding-top: 1em;
-        padding-bottom: 1em;
-
-        opacity: 0.7;
-    }
+    background-color: $color-black;
+    background-image: url('../images/site-header.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .site-header__logo {
-    display: block;
-
-    font-size: 1em;
-}
-
-.site-header__logo-link {
     margin: 0 auto;
     padding: 0;
     display: block;
+    // width: 14em;
+    // height: 3em;
     width: 14em;
-    height: 3em;
+    height: 9em;
 
+    font-size: 1em;
     text-indent: -9999px;
 
-    background-image: url('../img/logo-horizontal.svg');
+    // background-image: url('../images/logo-horizontal.svg');
+    background-image: url('../images/logo-stacked.svg');
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .site-header__nav {
-    font-weight: $font-weight-bold;
+    margin-top: 2em;
 
-    align-items: center;
+    font-weight: $font-weight-bold;
 }
 
 .site-header__nav-list {
@@ -49,8 +41,8 @@
 
 .site-header__nav-item {
     display: inline-block;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
 .site-header__nav-link {
@@ -65,6 +57,10 @@
     font-size: 0.8em;
     letter-spacing: 0.12em;
     color: $color-white;
+
+    &:visited {
+        color: $color-white;
+    }
 
     &:before {
         position: absolute;
@@ -84,47 +80,12 @@
         transform: scaleX(0);
     }
 
-    &:hover {
+    &:hover,
+    &.site-header__nav-link--active {
+        color: $color-blue;
+
         &:before {
             transform: scaleX(1);
-        }
-    }
-}
-
-
-.site-header__secondary-nav {
-    display: block;
-
-    clear: both;
-
-    background: $color-bg-alt;
-}
-
-
-@media only screen and (min-width: $mq-large) {
-    .site-header__inner {
-        display: flex;
-
-        text-align: left;
-
-        justify-content: space-between;
-    }
-
-    .site-header__nav {
-        display: flex;
-        float: right;
-    }
-
-    .site-header__logo {
-        float: left;
-    }
-
-    .site-header__nav-item {
-        margin-left: 1em;
-        margin-right: 0;
-
-        &:first-child {
-            margin-left: 0;
         }
     }
 }
